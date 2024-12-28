@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { planetVariants, textVariants } from '../constants/animations';
 import { useTabAccess } from '../hooks/useTabAccess';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Destination = () => {
 
@@ -17,6 +18,7 @@ const Destination = () => {
   const [currentTab, setCurrentTab] = useState<Destination>('moon')
 
   useBodyClass('destination-bg')
+  useDocumentTitle('Destination')
 
   return (
     <MainLayout number={1} title='Pick your destination'>

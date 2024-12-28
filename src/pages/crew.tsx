@@ -5,6 +5,7 @@ import { crewData } from '../data/crew';
 import { AnimatePresence, motion } from 'motion/react';
 import { crewVariants, textVariants } from '../constants/animations';
 import { useTabAccess } from '../hooks/useTabAccess';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Crew = () => {
 
@@ -17,6 +18,7 @@ const Crew = () => {
     const [currentTab, setCurrentTab] = useState<Crew>('commander')
 
   useBodyClass('crew-bg')
+  useDocumentTitle('Crew')
 
   return (
   <MainLayout title='Meet your crew' number={2} className='crew_page'>

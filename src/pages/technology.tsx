@@ -6,6 +6,7 @@ import { useScreenSize } from '../hooks/useScreenSize';
 import { AnimatePresence, motion } from 'motion/react';
 import { techVariants, textVariants } from '../constants/animations';
 import { useTabAccess } from '../hooks/useTabAccess';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Technology = () => {
 
@@ -21,6 +22,7 @@ const Technology = () => {
   const imgPath = tabletWide ? technologyData[currentTab].images.portrait : technologyData[currentTab].images.landscape
 
   useBodyClass('technology-bg')
+  useDocumentTitle('Technology')
 
   return (
   <MainLayout number={3} title='Spache launch 101' className='technology_page'>

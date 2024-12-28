@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../layouts/main';
 import { useBodyClass } from '../hooks/useBodyClass';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   useBodyClass('home-bg')
+  useDocumentTitle('Home')
 
   return (
 <MainLayout>
