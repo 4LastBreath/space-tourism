@@ -11,25 +11,21 @@ function App() {
   const cacheImages = async (imgs:string[]) => {
 
     try {
+      
       const promises = imgs.map((src) => {
         return new Promise<void>((resolve, reject) => {
           const img = new Image()
-          
-          if (img.complete) {
-            resolve()
-          } else {
             img.src = src
             img.onload = () => resolve()
             img.onerror = () => reject()
-          }
         })
       })
   
       await Promise.all(promises)
+      setIsLoading(false)
+
     } catch (err) {
       console.error('cache error: ', err)
-    } finally {
-      setIsLoading(false)
     }
     
   }
