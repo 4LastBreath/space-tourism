@@ -1,0 +1,154 @@
+@use '../abstracts/' as *;
+
+.destination_content-wrapper {
+
+  gap: 2rem;
+  
+  @include mq(tablet-wide) {
+    flex-direction: column;
+    gap: 5rem;
+
+    > * {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include mq(phone-wide) {
+    gap: 3rem;
+  }
+
+}
+
+.destination_img-container {
+
+  @include mq(tablet-wide) {
+    min-height: 300px;
+  }
+
+  @include mq(phone-wide) {
+    min-height: 150px;
+  }
+}
+
+.destination_img {
+  width: 480px;
+
+  @include mq(tablet-wide) {
+    width: 300px;
+  }
+
+  @include mq(phone-wide) {
+    width: 150px;
+  }
+}
+
+.description_explanation-wrapper {
+  gap: 1.5rem;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @include mq(tablet-wide) {
+    gap: 1rem;
+
+    section {
+      gap: 1rem
+    }
+  }
+}
+
+.destination_tabs {
+  gap: 2rem;
+
+  @include mq(tablet-wide) {
+    justify-content: center;
+  }
+}
+
+.destination_tab {
+  position: relative;
+  font-family: "Barlow Condensed", serif;
+  border: none;
+  background-color: transparent;
+  color: $fc-accent;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 0.825rem;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+  }
+
+  &.active {
+    color: $fc-primary;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $fc-primary;
+
+    &::before {
+      display: block;
+      background-color: grey;
+    }
+  }
+
+  &.active {
+    color: $fc-primary;
+
+    &::before {
+      display: block;
+      background-color: white;
+    }
+  }
+}
+
+.destination_description {
+  max-width: 45ch;
+
+  @include mq(tablet-wide) {
+    max-width: 58ch;
+  }
+}
+
+.destination_divider {
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+
+  @include mq(tablet-wide) {
+    margin-block: 1rem;
+  }
+}
+
+.destination_infos {
+  display: flex;
+  gap: 2rem;
+
+  @include mq(phone-wide) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.destination_infos div p:first-child {
+  color: $fc-accent;
+}

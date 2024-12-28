@@ -1,0 +1,102 @@
+@use '../abstracts/' as *;
+
+
+h1, h2, h3, h4, h5,
+.sub-h1, .sub-h2 {
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, 
+.sub-h1 {
+  font-family: "Bellefair", serif;
+}
+
+h5, .sub-h2 {
+  font-family: "Barlow Condensed", serif;
+}
+
+h1 {
+  font-size: 9.375rem;
+  line-height: 1.4;
+
+  @include mq(tablet) {
+    font-size: 7rem;
+  }
+}
+
+h2 {
+  font-size: 6.25rem;
+  line-height: 1.25;
+
+  @include mq(tablet-wide) {
+    font-size: 5rem;
+  }
+
+  @include mq(phone-wide) {
+      font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+
+  @include mq(tablet-wide) {
+    font-size: 3rem;
+  }
+
+  @include mq(phone-wide) {
+    font-size: 2.2rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+  color: grey;
+
+  @include mq(tablet-wide) {
+    font-size: 1.8rem;
+  }
+
+  @include mq(phone-wide) {
+    font-size: 1.6rem;
+  }
+}
+
+h5 {
+  font-size: 1.75rem;
+  letter-spacing: 4.75px;
+  color: $fc-accent;
+
+  @include mq(tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+.paragraph {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: $fc-accent;
+  font-weight: $fw-light;
+  text-wrap: pretty;
+}
+
+.sub-h1 {
+  font-size: 1.75rem;
+}
+
+.sub-h2 {
+  font-size: 0.875rem;
+  letter-spacing: 2.35px;
+}
+
+.nav-text {
+  font-family: "Barlow Condensed", serif;
+  font-weight: $fw-light;
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+}

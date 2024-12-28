@@ -1,0 +1,60 @@
+@use '../abstracts/' as *;
+
+.nav-primary {
+  background-color: rgba(74, 79, 88, 0.4);
+  backdrop-filter: blur(20px);
+  height: 80px;
+  width: 100%;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.nav-primary_list {
+  padding-left: 8rem;
+  padding-right: 2.5rem;
+
+  @include mq(tablet-wide) {
+    padding-left: 4rem;
+  }
+}
+
+.nav-primary_list li a {
+  color: $fc-primary;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    transition: width 0.2s ease;
+  }
+  
+  &.active {
+    &::before {
+      width: 100%;
+      background-color: white;
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        width: 100%;
+        background-color: white;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      width: 100%;
+      background-color: rgb(165, 165, 165);
+    }
+  }
+
+}
+

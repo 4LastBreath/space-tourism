@@ -1,0 +1,138 @@
+@use '../abstracts/' as *;
+
+.page-wrapper_content.technology_page {
+  // max-width: calc(1275px + 5rem);
+  max-width: 100%;
+  padding-right: 0;
+
+  @include mq(tablet-wide) {
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+.page-wrapper_title.technology_page {
+  margin-left: 5.5rem;
+
+  @include mq(tablet) {
+    margin-left: 0;
+  }
+}
+
+.technology_content-wrapper {
+  gap: 2rem;
+
+  @include mq(tablet-wide) {
+    flex-direction: column-reverse;
+  }
+}
+
+.technology_explanation {
+  gap: 3rem;
+
+  @include mq(tablet-wide) {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 1rem;
+  }
+}
+
+.technology_explanation p {
+  margin-top: 1.5rem;
+
+  @include mq(tablet-wide) {
+    max-width: 55ch;
+    margin-top: 1rem;
+  }
+}
+
+.technology_tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include mq(tablet-wide) {
+    flex-direction: row;
+  }
+
+  @include mq(phone-wide) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.technology_tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  color: $fc-primary;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+  font-weight: $fw-medium;
+  background-color: transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid white;
+  }
+
+  &.active {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+  }
+
+  @include mq(tablet-wide) {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+    padding-top: 0.15rem;
+  }
+
+  @include mq(phone-wide) {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+.technology_img-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include mq(tablet-wide) {
+    justify-content: center;
+  }
+}
+
+.technology_img-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  max-height: 530px;
+
+  @include mq(tablet-wide) {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  @include mq(phone-wide) {
+    max-width: 100%;
+    height: 260px;
+  }
+}
+
+.technology_img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

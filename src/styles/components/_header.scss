@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+.header {
+  height: 144px;
+  padding-block: 2rem;
+  padding-left: 1.5rem;
+
+  @include mq(tablet-wide) {
+    height: 112px;
+    padding-top: 0;
+  }
+
+  @include mq(tablet) {
+    padding-inline: 1.5rem;
+  }
+}
+
+.header_line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+  margin-right: -30px;
+  z-index: 2;
+
+  @include mq(tablet-wide) {
+    opacity: 0;
+  }
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.header_drawer-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include mq(tablet) {
+    display: block;
+  }
+}

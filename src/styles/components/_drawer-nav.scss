@@ -1,0 +1,43 @@
+@use '../abstracts/' as *;
+
+.drawer-nav {
+  width: 100%;
+}
+
+.drawer-nav_list li a {
+  color: $fc-primary;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 24px;
+    transition: width 0.2s ease;
+    background-color: transparent;
+  }
+  
+  &.active {
+    &::before {
+      background-color: white;
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        background-color: white;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: rgb(165, 165, 165);
+    }
+  }
+
+}
+

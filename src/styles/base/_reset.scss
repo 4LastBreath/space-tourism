@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $fc-primary;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}

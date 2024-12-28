@@ -1,0 +1,18 @@
+.drawer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  right: 0;
+  top: 0;
+  width: 254px;
+  height: 100%;
+  background-color: hsla(230, 33%, 7%, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.drawer_close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
