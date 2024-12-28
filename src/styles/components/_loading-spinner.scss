@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+.loading-spinner_icon {
+  color: $fc-accent
+}
+
+.loading-spinner_text {
+  color: $fc-accent;
+  letter-spacing: 0.5px;
+}
