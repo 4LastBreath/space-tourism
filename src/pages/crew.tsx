@@ -72,7 +72,8 @@ const Crew = () => {
           {tabs.map((tab, i) => {
             const isActive = tab === currentTab
 
-            return <button 
+            return <button
+              key={tab} 
               className={isActive ? 'crew_tab active' : 'crew_tab'}
               id={`tab-id-${tab}`}
               onClick={() => setCurrentTab(tab)}

@@ -35,6 +35,7 @@ const Technology = () => {
               const isActive = tab === currentTab
 
               return <button
+                key={tab}
                 className={isActive ? 'technology_tab active' : 'technology_tab'}
                 id={`tab-id-${tab}`}
                 onClick={() => setCurrentTab(tab)}

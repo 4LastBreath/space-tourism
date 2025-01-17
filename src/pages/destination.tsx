@@ -54,7 +54,8 @@ const Destination = () => {
                         
                         const isActive = tab === currentTab
                         
-                        return <button 
+                        return <button
+                          key={tab} 
                           className={isActive ? 'destination_tab active' : 'destination_tab'}
                           id={`tab-id-${tab}`}
                           onClick={() => setCurrentTab(tab)}

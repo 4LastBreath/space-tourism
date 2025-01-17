@@ -10,6 +10,21 @@ import destinationMobileBg from '../styles/assets/destination/background-destina
 import technologyDesktopBg from '../styles/assets/technology/background-technology-desktop.jpg'
 import technologyTabletBg from '../styles/assets/technology/background-technology-tablet.jpg'
 import technologyMobileBg from '../styles/assets/technology/background-technology-mobile.jpg'
+import moon from '../styles/assets/destination/image-moon.webp'
+import europa from '../styles/assets/destination/image-europa.webp'
+import titan from '../styles/assets/destination/image-titan.webp'
+import mars from '../styles/assets/destination/image-mars.webp'
+import commander from '../styles/assets/crew/image-douglas-hurley.webp'
+import specialist from '../styles/assets/crew/image-mark-shuttleworth.webp'
+import pilot from '../styles/assets/crew/image-victor-glover.webp'
+import engineer from '../styles/assets/crew/image-anousheh-ansari.webp'
+import vehiculePortait from '../styles/assets/technology/image-launch-vehicle-portrait.jpg'
+import vehiculeLandscape from '../styles/assets/technology/image-launch-vehicle-landscape.jpg'
+import spaceportPortrait from '../styles/assets/technology/image-spaceport-portrait.jpg'
+import spaceportLandscape from '../styles/assets/technology/image-spaceport-landscape.jpg'
+import capsulePortrait from '../styles/assets/technology/image-space-capsule-portrait.jpg'
+import capsuleLandscape from '../styles/assets/technology/image-space-capsule-landscape.jpg'
+
 
 export const imgs = [
   homeDesktopBg,
@@ -23,5 +38,19 @@ export const imgs = [
   destinationMobileBg,
   technologyDesktopBg,
   technologyTabletBg,
-  technologyMobileBg
+  technologyMobileBg,
+  moon,
+  europa,
+  titan,
+  mars,
+  commander,
+  pilot,
+  engineer,
+  specialist,
+  vehiculePortait,
+  vehiculeLandscape,
+  spaceportPortrait,
+  spaceportLandscape,
+  capsulePortrait,
+  capsuleLandscape
 ]
